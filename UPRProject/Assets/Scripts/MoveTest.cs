@@ -5,13 +5,13 @@ using UnityEngine;
 public class MoveTest : MonoBehaviour
 {
     public Vector3 MoveOffset;
-    // Start is called before the first frame update
+    public Vector3 SpeedOffset;
+    public Vector3 JumpOffset;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

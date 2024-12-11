@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CommandManger CommandManger;
+    public CommandManager CommandManager;
 
+    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ICommand moveRight = new Movecommand(transform, Vector3.right);
-            CommandManger.ExecuteCommand(moveRight);
+            ICommand moveRight = new MoveCommand(transform, Vector3.right);
+            CommandManager.ExecuteCommand(moveRight);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ICommand moveLeft = new Movecommand(transform, Vector3.left);
-            CommandManger.ExecuteCommand(moveLeft);
+            ICommand moveLeft = new MoveCommand(transform, Vector3.left);
+            CommandManager.ExecuteCommand(moveLeft);
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
-            CommandManger.UndoLastCommand();
+            CommandManager.UnDoLastCommand();
         }
     }
 }
